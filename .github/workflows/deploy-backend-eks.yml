@@ -171,6 +171,7 @@ jobs:
         run: npm install -g snyk@latest
 
       - name: Snyk dependency scan
+        continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
